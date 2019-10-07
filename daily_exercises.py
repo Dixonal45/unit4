@@ -39,8 +39,14 @@ computer_choice = random.choice(["rock", "paper", "scissors"])
 
 def rock_paper_scissors():
     user_choice = input("Let's play rock-paper-scissors. Choose one!")
-    if computer_choice == "rock" and user_choice == "paper" or computer_choice == :
-        print("You won!")
+    if computer_choice == "rock" and user_choice == "paper" or computer_choice == "paper" and \
+            user_choice == "scissors" or computer_choice == "scissors" and user_choice == "rock":
+        print("You won! Computer chose", computer_choice)
+    elif computer_choice == user_choice:
+        print("Tie! Computer chose", computer_choice, ". Go again.")
+        rock_paper_scissors()
+    else:
+        print("You lost. Computer chose", computer_choice)
 
 
 def main():
