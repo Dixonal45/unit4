@@ -34,11 +34,13 @@ def triangle_input():
 
 
 # this program makes a rock-paper-scissors game
-computer_choice = random.choice(["rock", "paper", "scissors"])
+def computer():
+    return random.choice(["rock", "paper", "scissors"])
 
 
 def rock_paper_scissors():
     user_choice = input("Let's play rock-paper-scissors. Choose one!")
+    computer_choice = computer()
     if computer_choice == "rock" and user_choice == "paper" or computer_choice == "paper" and \
             user_choice == "scissors" or computer_choice == "scissors" and user_choice == "rock":
         print("You won! Computer chose", computer_choice)
@@ -49,12 +51,22 @@ def rock_paper_scissors():
         print("You lost. Computer chose", computer_choice)
 
 
+def caught_speeding(speed, birthday):
+    if birthday or speed <= 60:
+        print("Congratulations! No ticket!")
+    elif 61 <= speed <= 80:
+        print("Small ticket.")
+    else:
+        print("Big ticket.")
+
+
 def main():
     num = float(input("Give me a number."))
     check = float(input("Give me another number."))
     is_divisible(num, check)
     triangle_input()
     rock_paper_scissors()
+    caught_speeding(86, False)
 
 
 main()
