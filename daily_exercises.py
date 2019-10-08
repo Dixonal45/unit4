@@ -66,7 +66,7 @@ def main():
     is_divisible(num, check)
     triangle_input()
     rock_paper_scissors()
-    caught_speeding(86, False)
+    caught_speeding(86, True)
 
 
 main()
