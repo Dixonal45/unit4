@@ -51,6 +51,7 @@ def rock_paper_scissors():
         print("You lost. Computer chose", computer_choice)
 
 
+# this program tells you if you are speeding
 def caught_speeding(speed, birthday):
     if birthday or speed <= 60:
         print("Congratulations! No ticket!")
